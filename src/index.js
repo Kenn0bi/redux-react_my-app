@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
+import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 // import { createStore, combineReducers } from 'redux';
 import store from './storeFabric';
@@ -14,7 +14,9 @@ import {
   removeBookFromBasket,
   changeAuthor,
   changeTitle,
-  changePrice
+  changePrice,
+  addBook,
+  removeBook,
 } from './actionCreators'
 
 /*
@@ -64,23 +66,36 @@ store.subscribe(()=>{
   console.log(JSON.stringify(store.getState(), null, ' '));
 })
 
-store.dispatch(addBookToBasket(3))
-store.dispatch(addBookToBasket(3))
-store.dispatch(addBookToBasket(5))
-store.dispatch(removeBookFromBasket(3))
+// store.dispatch(addBookToBasket(3))
+// store.dispatch(addBookToBasket(3))
+// store.dispatch(addBookToBasket(5))
+// store.dispatch(removeBookFromBasket(3))
 
-store.dispatch(changeAuthor('John Doe'))
-store.dispatch(changeTitle('JS за 24 часа'))
-store.dispatch(changePrice(350.50))
+// store.dispatch(changeAuthor('John Doe'))
+// store.dispatch(changeTitle('JS за 24 часа'))
+// store.dispatch(changePrice(350.50))
+// store.dispatch(addBook({
+//   id: 100, 
+//   title: 'Mongo DB. Полное руководство', 
+//   author: 'Брэд Шэннон, Брэзил Йон', 
+//   price: 2000
+// }))
+// store.dispatch(addBook({
+//   id: 101, 
+//   title: 'Профессиональный TypeScript', 
+//   author: 'Борис Черный', 
+//   price: 2000
+// }))
+// store.dispatch(removeBook(1))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
     
-    {/* <Provider store={store}>
+    <Provider store={store}>
       <App />
-    </Provider> */}
+    </Provider>
     
   </React.StrictMode>
 );

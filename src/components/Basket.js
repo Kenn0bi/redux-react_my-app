@@ -1,15 +1,7 @@
 import React from 'react';
 
 class Basket extends React.Component {
- constructor(props) {
-  super(props);
-  this.removeItem = this.removeItem.bind(this);
- } 
  
- removeItem(ev){
-  ev.preventDefault();
- }
-
 render (){ 
  let items = [];
  let dataBook = {};
@@ -25,7 +17,7 @@ render (){
        <a href="#">{dataBook[item]['title']}</a>
        <span>{this.props.items[item]}шт</span>
        <span>{dataBook[item]['price']}руб</span>
-       <a href="#" onClick={this.removeItem} id={item} className="btn btn-success" >Удалить</a>
+       <a href="#" onClick={()=>{alert(1)}} id={item} className="btn btn-success" >Удалить</a>
       </div>
     )  
  }

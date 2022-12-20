@@ -14,7 +14,7 @@ export const items = function(state = {}, action) {
             newState[action.id]++;
           return newState
         case REMOVE_BOOK_FROM_BASKET:
-            newState = Object.assign(state);
+            newState = Object.assign({}, state);
             for (let i in state) {
                 if (i !== action.id) {
                     newState[i] = state[i]

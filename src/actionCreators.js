@@ -3,7 +3,9 @@ import {
     REMOVE_BOOK_FROM_BASKET,
     CHANGE_AUTHOR,
     CHANGE_TITLE, 
-    CHANGE_PRICE
+    CHANGE_PRICE,
+    ADD_BOOK,
+    REMOVE_BOOK
   } from './actions.js'
 
 export const addBookToBasket = (id) => (
@@ -24,4 +26,12 @@ export const changeTitle = (title) => (
 
 export const changePrice = (price) => (
     {type: CHANGE_PRICE, price}
+);
+
+export const addBook = (book) => (
+    {type: ADD_BOOK, book}
+);
+
+export const removeBook = (id) => (
+    {type: REMOVE_BOOK, id}
 );
