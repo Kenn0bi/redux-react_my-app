@@ -9,7 +9,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
-        remove: (id) => dispatch(removeBookFromBasket(id))
+        removeBookFromBasket: (id) => dispatch(removeBookFromBasket(id))
     }
 }
 

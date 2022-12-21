@@ -5,3 +5,4 @@ export const REMOVE_BOOK = "REMOVE_BOOK";
 export const CHANGE_TITLE = "CHANGE_TITLE";
 export const CHANGE_AUTHOR = "CHANGE_AUTHOR";
 export const CHANGE_PRICE = "CHANGE_PRICE";
+export const CHANGE_SEARCH = "CHANGE_SEARCH";

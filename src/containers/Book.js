@@ -3,8 +3,8 @@ import App from "../App";
 import {addBookToBasket} from '../actionCreators'
 
 function mapStateToProps(state){
-    const {dataBook, searchForm} = state;
-    return {dataBook, searchForm}
+    const {dataBook} = state;
+    return {dataBook}
 }
 
 function mapDispatchToProps(dispatch){
@@ -13,4 +13,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(Book)

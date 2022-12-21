@@ -10,7 +10,7 @@ class Book extends React.Component{
     <p> Автор: {this.props.author}</p>
     <p> Цена: {price} руб.</p>
     <a href="#" onClick={()=>{alert(2)}} className="btn btn-success">Сравнить</a>&nbsp;
-    <a href="#" onClick={()=>{alert(2)}} className="btn btn-success">В корзину</a>
+    <a href="#" onClick={(ev)=>{this.props.handleAddToBasket(this.props.id); ev.preventDefault()}} className="btn btn-success">В корзину</a>
     </div>;
   }
 }

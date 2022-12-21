@@ -10,6 +10,10 @@ render (){
   dataBook[this.props.dataBook[i]["id"]] = this.props.dataBook[i];
  }
  
+//  console.log(this.props.items)
+//  console.log(items)
+//  console.log(dataBook)
+
  for(let item in this.props.items){
     summa += dataBook[item]['price'] * this.props.items[item]; 
     items.push(
@@ -17,7 +21,7 @@ render (){
        <a href="#">{dataBook[item]['title']}</a>
        <span>{this.props.items[item]}шт</span>
        <span>{dataBook[item]['price']}руб</span>
-       <a href="#" onClick={()=>{alert(1)}} id={item} className="btn btn-success" >Удалить</a>
+       <a href="#" onClick={(ev)=>{this.props.removeBookFromBasket(item); ev.preventDefault()}} id={item} className="btn btn-success" >Удалить</a>
       </div>
     )  
  }

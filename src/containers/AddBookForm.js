@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import AddBookForm from "../components/AddBookForm";
-import {addBook} from '../actionCreators';
+import {addBook, changeAuthor, changeTitle, changePrice} from '../actionCreators';
 
 function mapStateToProps(state){
     const {addBookForm} = state;
@@ -9,7 +9,10 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
-        remove: (book) => dispatch(addBook(book))
+        addBook: (book) => dispatch(addBook(book)),
+        changeAuthor: (value) => dispatch(changeAuthor(value)),
+        changeTitle: (value) => dispatch(changeTitle(value)),
+        changePrice: (value) => dispatch(changePrice(value)),
     }
 }
 

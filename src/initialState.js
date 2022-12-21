@@ -9,7 +9,7 @@ export default {
         author: "",
         price: 0
     },
-    // searchForm: { // состояние формы поиска
-    //     value: ""
-    // }
+    searchForm: { // состояние формы поиска
+        value: ""
+    }
 }
